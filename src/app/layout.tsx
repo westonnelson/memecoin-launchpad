@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../config';
+// Simply place this at the top of your application's entry point to have the components working out of the box.
+import '@coinbase/onchainkit/styles.css';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';
@@ -19,11 +21,11 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Onchain App Template',
-  description: 'Built with OnchainKit',
+  title: 'Memecoin Launchpad',
+  description: 'Bulding Onchain on Base',
   openGraph: {
-    title: 'Onchain App Template',
-    description: 'Built with OnchainKit',
+    title: 'MemeCoin Launchpad',
+    description: 'Building Onchain on Base',
     images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
   },
 };

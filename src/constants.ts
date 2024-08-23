@@ -1,4 +1,4 @@
-export const BASE_SEPOLIA_CHAIN_ID = 84532;
+export const BASE_SEPOLIA_CHAIN_ID = 8453;
 
 export const clickContractAddress =
   '0x67c97D1FB8184F038592b2109F854dfb09C77C75';

@@ -1,55 +1,22 @@
-'use client';
-
-import {
-  DISCORD_LINK,
-  FIGMA_LINK,
-  GITHUB_LINK,
-  ONCHAINKIT_LINK,
-  TWITTER_LINK,
-} from 'src/links';
-import ArrowSvg from 'src/svg/ArrowSvg';
-
-const docLinks = [
-  { href: ONCHAINKIT_LINK, title: 'Docs' },
-  { href: GITHUB_LINK, title: 'Github' },
-  { href: DISCORD_LINK, title: 'Discord' },
-  { href: FIGMA_LINK, title: 'Figma' },
-  { href: TWITTER_LINK, title: 'X' },
-];
-
+// frontend/components/Footer.tsx
 export default function Footer() {
   return (
-    <section className="mt-auto mb-2 flex w-full flex-col flex-col-reverse justify-between gap-2 md:mt-8 md:mb-6 md:flex-row">
-      <aside className="flex items-center pt-2 md:pt-0">
-        <h3 className="mr-2 mb-2 text-m md:mb-0">
-          Built with love by{' '}
-          <a
-            href={ONCHAINKIT_LINK}
-            target="_blank"
-            rel="noreferrer"
-            title="OnchainKit"
-            className="font-semibold hover:text-indigo-600"
-          >
-            OnchainKit
-          </a>
-        </h3>
-      </aside>
-      <ul className="mt-4 flex max-w-full flex-col flex-wrap justify-center gap-3 md:mt-0 md:flex-row md:justify-start md:gap-6">
-        {docLinks.map(({ href, title }) => (
-          <li className="flex" key={href}>
-            <a
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              title={title}
-              className="flex items-center gap-1"
-            >
-              <p>{title}</p>
-              <ArrowSvg />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <footer className="mt-16 py-8 text-center text-gray-500 bg-[#0d1117]">
+      <p>
+        Built with <span className="text-red-500">❤️</span> by{' '}
+        <a
+          href="https://x.com/westonnelson"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-600 hover:underline"
+        >
+          @westonnelson
+        </a>
+      </p>
+      <div className="mt-2 flex justify-center gap-4 text-sm">
+        <a href="https://docs.cdp.coinbase.com/" className="hover:underline">Docs</a>
+        <a href="https://github.com/westonnelson/memecoin-launchpad" className="hover:underline">GitHub</a>
+      </div>
+    </footer>
   );
 }

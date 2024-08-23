@@ -16,6 +16,7 @@ import {
   clickContractABI,
   clickContractAddress,
 } from '../constants';
+import { Main } from 'next/document';
 
 export default function TransactionWrapper() {
   const contracts = [
